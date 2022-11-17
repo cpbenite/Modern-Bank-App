@@ -2,7 +2,14 @@ import { features } from '../constants'
 import styles, { layout } from '../style'
 import Button from './Button'
 
-const FeatureCard = ({ icon, title, content, index }) => (
+type FeatureCardProps = {
+  icon: string,
+  title: string,
+  content: string,
+  index: Number
+}
+
+const FeatureCard = ({ icon, title, content, index }: FeatureCardProps) => (
   <div className={`flex flex-row p-6 rounded-[20px] feature-card
                 ${index !== features.length - 1 ? 'mb-6' : 'mb-0'}`}>
     <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
