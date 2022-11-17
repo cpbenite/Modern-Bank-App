@@ -41,6 +41,7 @@ const Business = () => {
 
       <div
         className={`${layout.sectionImg} flex-col`}
+        data-testid="feature-1"
       >
         {features.map((feature, index) => (
           <FeatureCard key={feature.id} {...feature} index={index} />
